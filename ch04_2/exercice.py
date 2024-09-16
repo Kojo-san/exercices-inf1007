@@ -14,6 +14,9 @@ def get_random_sentence(animals, adjectives, fruits):
 	random_number=random.randrange(0,2)
 	return f"Aujourd'hui, j'ai vu un {animals[random_number]} s'emparer d'un panier {adjectives[random_number]} plein de {fruits[random_number]}"
 
+def format_date(year, month, day, hours, minutes, seconds):
+	return ""
+
 def encrypt(text, shift):
 	text_encrypt=""
 	for letter in text:
@@ -37,7 +40,9 @@ if __name__ == "__main__":
 	adjectives = ("rouge", "officiel", "lourd")
 	fruits = ("pommes", "kiwis", "mangue")
 	print(get_random_sentence(animals, adjectives, fruits))
-	
+
+	print(format_date(1970, 1, 12, 12, 3, 45.6789))
+
 	print(encrypt("ABC", 1))
 	print(encrypt("abc 123 XYZ", 3))
 	print(decrypt("DEF 123 ABC", 3))
